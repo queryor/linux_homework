@@ -25,19 +25,24 @@ int main()
     cout<<c<<endl;
     
     //写操作
-    //写的数据大于缓存大小
+    cout<<"写的数据大于缓存大小,写5个字符"<<endl;
     f.file_write(b,5);
-    //写入的数据小于缓存大小
+    cout<<"写入的数据小于缓存大小,写1个字符"<<endl;
     f.file_write(&a,1); 
     
     //lseek操作
     //lseek到文件开始
+    cout<<"lseek到文件开始"<<endl;
     f.file_lseek(0,SEEK_SET);
+    
+    //写入的数据小于缓存大小
+    cout<<"写入数据"<<endl;
     f.file_write(&a,1); 
     //读小于缓存大小的数据
+    cout<<"读入一个字符的数据"<<endl;
     char c1;
     f.file_read(&c1,1);
-    cout<<c1<<endl;
+    cout<<"读入的字符为："<<c1<<endl;
     //关闭文件
     f.file_close();
     return 0;
