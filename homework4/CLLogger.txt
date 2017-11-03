@@ -1,0 +1,2 @@
+In CLExecutiveNameServer::GetCommunicationPtr(), m_NameTable.find error	Error code: 0
+In CLExecutiveNameServer::PostExecutiveMessage(), pNameServer->GetCommunicationPtr error	Error code: 0
